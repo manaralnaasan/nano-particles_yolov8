@@ -15,7 +15,7 @@
     <a href="https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
     <a href="https://www.kaggle.com/ultralytics/yolov8"><img src="https://kaggle.com/static/images/open-in-kaggle.svg" alt="Open In Kaggle"></a>
   </div>
-  <br>
+<br>
 
 [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics), developed by [Ultralytics](https://ultralytics.com),
 is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces
@@ -24,12 +24,7 @@ easy to use, making it an excellent choice for a wide range of object detection,
 classification tasks.
 
 <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/yolo-comparison-plots.png"></a>
-
-## Performance 
-
-| Model | Test Size | AP<sub>50</sub><sup>test</sup> | batch 1 fps | batch 32 average time |
-| :-- | :-: | :-: | :-: | :-: |
-| [**YOLOv8m**](https://github.com/akanametov/yolov7/releases/download/1.0/yolov7-tiny-builder.pt) | 640 | **98.7%** | 417 *fps* | 2.4 *ms* |
+</div>
 
 ## Installation
 
