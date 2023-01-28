@@ -30,32 +30,40 @@ classification tasks.
 
 ``` shell
 # clone repo
-git clone https://github.com/akanametov/ultralytics
+git clone https://github.com/akanametov/yolov8-face
 
 # pip install required packages
 pip install ultralytics
 
 # go to code folder
-cd ultralytics
+cd yolov8-face
 ```
 
+## Trained models
+
+[`yolov8n-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt)
+
+[`yolov8m-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-football.pt)
+
+[`yolov8m-parking.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-parking.pt)
+
+[`yolov8m-drone.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-drone.pt)
+
 </details>
+
+# YOLOv8-face
 
 ## Inference
 
 On image:
 
 ```shell
-yolo task=detect \
-mode=predict \
-model=yolov8m-football.pt \
-conf=0.25 \
-source=examples/football.jpg
+yolo task=detect mode=predict model=yolov8n-face.pt conf=0.25 imgsz=1280 line_thickness=1 max_det=1000 source=examples/face.jpg
 ```
 
 <div align="center">
     <a href="./">
-        <img src="./results/football.jpg" width="90%"/>
+        <img src="./results/face/face.jpg" width="90%"/>
     </a>
 </div>
 
@@ -64,27 +72,92 @@ source=examples/football.jpg
 PR curve:
 <div align="center">
     <a href="./">
-        <img src="./results/P_curve.png" width="30%"/>
+        <img src="./results/face/P_curve.png" width="30%"/>
     </a>
     <a href="./">
-        <img src="./results/PR_curve.png" width="30%"/>
+        <img src="./results/face/PR_curve.png" width="30%"/>
     </a>
     <a href="./">
-        <img src="./results/R_curve.png" width="30%"/>
+        <img src="./results/face/R_curve.png" width="30%"/>
     </a>
 </div>
 
 Losses and mAP:
 <div align="center">
     <a href="./">
-        <img src="./results/results.png" width="80%"/>
+        <img src="./results/face/results.png" width="80%"/>
     </a>
 </div>
 
 Confusion matrix:
 <div align="center">
     <a href="./">
-        <img src="./results/confusion_matrix.png" width="70%"/>
+        <img src="./results/face/confusion_matrix.png" width="70%"/>
+    </a>
+</div>
+
+## Training
+
+Data preparation
+
+* Download [dataset](http://shuoyang1213.me/WIDERFACE/):
+
+* Download pretrained [yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) model.
+
+Single GPU training
+
+``` shell
+# train model
+yolo task=detect \
+mode=train \
+model=yolov8n.pt \
+data=datasets/data.yaml \
+epochs=100 \
+imgsz=640
+```
+
+# YOLOv8-football
+
+## Inference
+
+On image:
+
+```shell
+yolo task=detect mode=predict model=yolov8m-football.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/football.jpg
+```
+
+<div align="center">
+    <a href="./">
+        <img src="./results/football/football.jpg" width="90%"/>
+    </a>
+</div>
+
+## Results
+
+PR curve:
+<div align="center">
+    <a href="./">
+        <img src="./results/football/P_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/football/PR_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/football/R_curve.png" width="30%"/>
+    </a>
+</div>
+
+Losses and mAP:
+<div align="center">
+    <a href="./">
+        <img src="./results/football/results.png" width="80%"/>
+    </a>
+</div>
+
+Confusion matrix:
+<div align="center">
+    <a href="./">
+        <img src="./results/football/confusion_matrix.png" width="70%"/>
     </a>
 </div>
 
@@ -94,10 +167,137 @@ Data preparation
 
 * Download [dataset](https://universe.roboflow.com/roboflow-jvuqo/football-players-detection-3zvbc/dataset/2#):
 
+* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
+
+Single GPU training
+
 ``` shell
-bash scripts/get_dataset.sh
+# train model
+yolo task=detect \
+mode=train \
+model=yolov8m.pt \
+data=datasets/data.yaml \
+epochs=120 \
+imgsz=960
 ```
-and pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
+# YOLOv8-parking
+
+## Inference
+
+On image:
+
+```shell
+yolo task=detect mode=predict model=yolov8m-parking.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/parking.jpg
+```
+
+<div align="center">
+    <a href="./">
+        <img src="./results/parking/parking.jpg" width="90%"/>
+    </a>
+</div>
+
+## Results
+
+PR curve:
+<div align="center">
+    <a href="./">
+        <img src="./results/parking/P_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/parking/PR_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/parking/R_curve.png" width="30%"/>
+    </a>
+</div>
+
+Losses and mAP:
+<div align="center">
+    <a href="./">
+        <img src="./results/parking/results.png" width="80%"/>
+    </a>
+</div>
+
+Confusion matrix:
+<div align="center">
+    <a href="./">
+        <img src="./results/parking/confusion_matrix.png" width="70%"/>
+    </a>
+</div>
+
+## Training
+
+Data preparation
+
+* Download [dataset](https://universe.roboflow.com/brad-dwyer/pklot-1tros/dataset/4):
+
+* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
+
+Single GPU training
+
+``` shell
+# train model
+yolo task=detect \
+mode=train \
+model=yolov8m.pt \
+data=datasets/data.yaml \
+epochs=10 \
+batch=32 \
+imgsz=640
+```
+
+# YOLOv8-drone
+
+## Inference
+
+On image:
+
+```shell
+yolo task=detect mode=predict model=yolov8m-drone.pt conf=0.25 imgsz=1280 line_thickness=1 source=examples/drone.jpg
+```
+
+<div align="center">
+    <a href="./">
+        <img src="./results/drone/drone.jpg" width="90%"/>
+    </a>
+</div>
+
+## Results
+
+PR curve:
+<div align="center">
+    <a href="./">
+        <img src="./results/drone/P_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/drone/PR_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/drone/R_curve.png" width="30%"/>
+    </a>
+</div>
+
+Losses and mAP:
+<div align="center">
+    <a href="./">
+        <img src="./results/drone/results.png" width="80%"/>
+    </a>
+</div>
+
+Confusion matrix:
+<div align="center">
+    <a href="./">
+        <img src="./results/drone/confusion_matrix.png" width="70%"/>
+    </a>
+</div>
+
+## Training
+
+Data preparation
+
+* Download [dataset](https://universe.roboflow.com/projects-s5hzp/dronesegment/dataset/1):
+
+* Download pretrained [yolov8m.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt) model.
 
 Single GPU training
 
@@ -113,7 +313,9 @@ imgsz=640
 
 ## Transfer learning
 
-[`yolov8m.pt`](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt)
+[`yolov8n.pt`](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8m.pt)
+
+[`yolov8m.pt`](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt)
 
 ## <div align="center">License</div>
 
