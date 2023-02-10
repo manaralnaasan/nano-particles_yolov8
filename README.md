@@ -43,10 +43,13 @@ cd yolov8-face
 
 [`yolov8n-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt)
 
+[`yolov8n-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-football.pt)
 [`yolov8m-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-football.pt)
 
+[`yolov8n-parking.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-parking.pt)
 [`yolov8m-parking.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-parking.pt)
 
+[`yolov8n-drone.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-drone.pt)
 [`yolov8m-drone.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-drone.pt)
 
 </details>
