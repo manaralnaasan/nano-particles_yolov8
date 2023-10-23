@@ -26,6 +26,11 @@ classification tasks.
 <img width="100%" src="https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/yolo-comparison-plots.png"></a>
 </div>
 
+## 🔥Update
+
+- ✅ **YOLOv8-m (face) trained on WIDERFace** [23.10]
+- [ ] YOLOv8-l (face) trained on WIDERFace [29.10]
+
 ## Installation
 
 ``` shell
@@ -42,6 +47,7 @@ cd yolov8-face
 ## Trained models
 
 [`yolov8n-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt)
+[`yolov8m-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-face.pt)
 
 [`yolov8n-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-football.pt)
 [`yolov8m-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-football.pt)
