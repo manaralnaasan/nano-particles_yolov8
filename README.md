@@ -28,8 +28,9 @@ classification tasks.
 
 ## 🔥Update
 
+
 - ✅ **YOLOv8-m (face) trained on WIDERFace [23.10]** 
-- [x] YOLOv8-l (face) trained on WIDERFace [29.10]
+- ✅ **YOLOv8-l (face) trained on WIDERFace [23.10]** 
 
 ## Installation
 
@@ -48,6 +49,7 @@ cd yolov8-face
 
 [`yolov8n-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt)
 [`yolov8m-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-face.pt)
+[`yolov8l-face.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8l-face.pt)
 
 [`yolov8n-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-football.pt)
 [`yolov8m-football.pt`](https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8m-football.pt)
