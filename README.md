@@ -28,8 +28,8 @@ classification tasks.
 
 ## 🔥Update
 
-- ✅ **YOLOv8-m (face) trained on WIDERFace** [23.10]
-- [ ] YOLOv8-l (face) trained on WIDERFace [29.10]
+- ✅ **YOLOv8-m (face) trained on WIDERFace [23.10]** 
+- [x] YOLOv8-l (face) trained on WIDERFace [29.10]
 
 ## Installation
 
