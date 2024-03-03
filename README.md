@@ -130,6 +130,64 @@ epochs=100 \
 imgsz=640
 ```
 
+# YOLOv8-person
+
+## Inference
+
+On image:
+
+```shell
+yolo task=detect mode=predict model=yolov8n-face.pt conf=0.25 imgsz=1280 line_thickness=1 max_det=1000 source=examples/person.jpg
+```
+
+<div align="center">
+    <a href="./">
+        <img src="./results/person/person.jpg" width="90%"/>
+    </a>
+</div>
+
+## Results
+
+PR curve:
+<div align="center">
+    <a href="./">
+        <img src="./results/person/P_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/person/PR_curve.png" width="30%"/>
+    </a>
+    <a href="./">
+        <img src="./results/person/R_curve.png" width="30%"/>
+    </a>
+</div>
+
+Losses and mAP:
+<div align="center">
+    <a href="./">
+        <img src="./results/person/results.png" width="80%"/>
+    </a>
+</div>
+
+## Training
+
+Data preparation
+
+* Download [dataset](https://competitions.codalab.org/competitions/19118):
+
+* Download pretrained [yolov8n.pt](https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov8n.pt) model.
+
+Single GPU training
+
+``` shell
+# train model
+yolo task=detect \
+mode=train \
+model=yolov8n.pt \
+data=datasets/data.yaml \
+epochs=100 \
+imgsz=640
+```
+
 # YOLOv8-football
 
 ## Inference
