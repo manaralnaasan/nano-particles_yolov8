@@ -101,7 +101,7 @@ Training losses and batch0:
 
 ### Training preparations
 
--> Download [Dataset](https://app.roboflow.com/manar-0qgxf/particles-detection/annotate/job/PBM1xYchAfTcsAbKdLT0)
+-> Download [Dataset](https://app.roboflow.com/manar-du0ri/nanoparticles-iestz/1)
 
 -> Download pretrained models [yolov8m-NPs.pt](https://github.com/manaralnaasan/nano-particles_yolov8/releases/download/v1.0.0-pretrained/yolov8m-NPs.pt) and [yolov8n-NPs.pt](https://github.com/manaralnaasan/nano-particles_yolov8/releases/download/v1.0.0-pretrained/yolov8n-NPs.pt)
 
